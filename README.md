@@ -4,7 +4,7 @@
 > ***微信代理有风险，使用需谨慎***
 
 ## 注意事项
-- 依赖 [midjourney-proxy](https://github.com/novicezk/midjourney-proxy) 提供的api接口
+- 依赖 [midjourney-proxy](https://github.com/iddddg/midjourney-proxy) 提供的api接口
 - 仅作为 midjourney-proxy 的示例应用场景，有问题需自行解决
 - 推荐使用docker启动；mac M或其他arm架构电脑，暂时使用npm启动
 
@@ -12,7 +12,7 @@
 
 1. 下载镜像
 ```shell
-docker pull novicezk/wechat-midjourney:2.0.2
+docker pull iddddg/wechat-midjourney:2.0.2
 ```
 2. 启动容器
 ```shell
@@ -21,7 +21,7 @@ docker run -d --name wechat-midjourney \
  -p 4120:4120 \
  -v /xxx/xxx/config:/app/config \
  --restart=always \
- novicezk/wechat-midjourney:2.0.2
+ iddddg/wechat-midjourney:2.0.2
 
 # 或启动时添加配置
 docker run -d --name wechat-midjourney \
@@ -30,7 +30,7 @@ docker run -d --name wechat-midjourney \
  -e MJ_PROXY_SECRET=your-api-secret \
  -e MJ_NOFIFY_HOOK=http://172.17.0.1:4120/notify \
  --restart=always \
- novicezk/wechat-midjourney:2.0.2
+ iddddg/wechat-midjourney:2.0.2
 ```
 
 3. 查看启动日志，微信扫描二维码，若二维码无法扫码，复制二维码链接浏览器打开扫码
@@ -41,7 +41,7 @@ docker logs -f -n 200 wechat-midjourney
 
 ## npm启动
 ```shell
-git clone git@github.com:novicezk/wechat-midjourney.git
+git clone git@github.com:iddddg/wechat-midjourney.git
 cd wechat-midjourney
 npm install
 # 可能执行错误，缺少library，按提示解决
