@@ -10,5 +10,5 @@ VERSION=$1
 
 docker build . -t wechat-midjourney:${VERSION}
 
-docker tag wechat-midjourney:${VERSION} novicezk/wechat-midjourney:${VERSION}
-docker push novicezk/wechat-midjourney:${VERSION}
+docker tag wechat-midjourney:${VERSION} iddddg/wechat-midjourney:${VERSION}
+docker push iddddg/wechat-midjourney:${VERSION}
