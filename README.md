@@ -27,6 +27,7 @@ docker run -d --name wechat-midjourney \
 docker run -d --name wechat-midjourney \
  -p 4120:4120 \
  -e MJ_PROXY_ENDPOINT=http://172.17.0.1:8080/mj \
+ -e MJ_PROXY_SECRET=your-api-secret \
  -e MJ_NOFIFY_HOOK=http://172.17.0.1:4120/notify \
  --restart=always \
  novicezk/wechat-midjourney:2.0.2
@@ -54,6 +55,7 @@ npm run serve
 | 变量名 | 非空 | 描述 |
 | :-----| :----: | :---- |
 | MJ_PROXY_ENDPOINT | 是 | midjourney代理服务的地址 |
+| MJ_PROXY_SECRET | 否 | midjourney代理服务的接口密钥 |
 | MJ_NOFIFY_HOOK | 是 | 当前服务的回调接收地址 |
 | HTTP_PROXY | 否 | 访问cdn图片的代理地址 |
 
